@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<layout>
+    <adminhtml_catalog_product_edit>
+        <reference name="head">
+            <action method="setCanLoadExtJs"><flag>1</flag></action>
+            <action method="setCanLoadRulesJs"><flag>1</flag></action>
+        </reference>
+        <reference name="js">
+            <block type="adminhtml/promo_catalog_edit_js" template="promo/js.phtml" />
+        </reference>
+        <!--<block type="adminhtml/promo_catalog_edit_tab_conditions" name="promo_catalog_edit_tab_conditions"/>-->
+    </adminhtml_catalog_product_edit>
+</layout>

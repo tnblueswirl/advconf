@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <AtlanticBT_Advancedconfig>
+            <version>0.0.1.0</version>
+        </AtlanticBT_Advancedconfig>       
+    </modules>
+    <global>
+        <models>
+            <atlanticbt_advancedconfig>
+                <class>AtlanticBT_Advancedconfig_Model</class>
+            </atlanticbt_advancedconfig>
+        </models>
+        <resources>
+            <advancedconfig_setup>
+                <setup>
+                    <module>AtlanticBT_Advancedconfig</module>
+                    <class>AtlanticBT_Advancedconfig_Model_Resource_Setup</class>
+                </setup>
+            </advancedconfig_setup>
+        </resources>
+        <helpers>
+            <atlanticbt_advancedconfig>
+                <class>AtlanticBT_Advancedconfig_Helper</class>
+            </atlanticbt_advancedconfig>
+        </helpers>
+        <blocks>
+            <atlanticbt_advancedconfig><class>AtlanticBT_Advancedconfig_Block</class></atlanticbt_advancedconfig>
+            <adminhtml>
+                <rewrite>
+                    <catalog_product_edit_tab_super_config>AtlanticBT_Advancedconfig_Block_Adminhtml_Catalog_Product_Edit_Tab_Super_Config</catalog_product_edit_tab_super_config>
+                </rewrite>
+            </adminhtml>
+        </blocks>        
+    </global>
+    <admin>
+         <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <atlanticbt_advancedconfig before="Mage_Adminhtml">AtlanticBT_Advancedconfig_Adminhtml</atlanticbt_advancedconfig>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <adminhtml>
+        <layout>
+            <updates>
+                <atlanticbt_advancedconfig>
+                    <file>atlanticbt_advancedconfig.xml</file>
+                </atlanticbt_advancedconfig>
+            </updates>
+        </layout>
+    </adminhtml>
+</config>
