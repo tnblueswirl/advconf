@@ -1,0 +1,17 @@
+<div class="rule-tree">
+    <div class="entry-edit-head">
+        <h4 class="icon-head head-edit-form fieldset-legend"><?php echo Mage::helper('catalog')->__('Advanced Attribute Price Rules') ?></h4>
+    </div>
+    <fieldset id="advanced_config_conditions_fieldset" <?php echo $this->serialize(array('class')) ?>>
+    <?php if ($this->getComment()): ?>
+        <p class="comment"><?php echo $this->escapeHtml($this->getComment()) ?></p>
+    <?php endif; ?>
+    <?php echo $this->getChildrenHtml() ?>
+    </fieldset>
+</div>
+<script type="text/javascript">
+var advanced_config_conditions_fieldset = new VarienRulesForm('advanced_config_conditions_fieldset', '<?php echo $this->getNewChildUrl() ?>');
+<?php if ($this->getReadonly()): ?>
+    advanced_config_conditions_fieldset.setReadonly(true);
+<?php endif; ?>
+</script>

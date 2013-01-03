@@ -66,25 +66,6 @@
         </ul>
     </fieldset>
 </div>
-<div class="entry-edit">
-    <div class="rule-tree">
-        <div class="entry-edit-head">
-            <h4 class="icon-head head-edit-form fieldset-legend"><?php echo Mage::helper('catalog')->__('Advanced Attribute Price Rules') ?></h4>
-        </div>
-        <fieldset id="<?php echo $this->getHtmlId() ?>_advanced" <?php echo $this->serialize(array('class')) ?>>
-        <?php if ($this->getComment()): ?>
-            <p class="comment"><?php echo $this->escapeHtml($this->getComment()) ?></p>
-        <?php endif; ?>
-        <?php echo $this->getChildrenHtml() ?>
-        </fieldset>
-    </div>
-    <script type="text/javascript">
-    var <?php echo $this->getHtmlId() ?> = new VarienRulesForm('<?php echo $this->getHtmlId() ?>_advanced', '<?php echo $this->getNewChildUrl() ?>');
-    <?php if ($this->getReadonly()): ?>
-        <?php echo $this->getHtmlId() ?>.setReadonly(true);
-    <?php endif; ?>
-    </script>
-</div>
 <div class="no-display" id="<?php echo $this->getHtmlId() ?>_attribute_template">
     <div class="<?php if (!$this->isReadonly()):?>attribute-name-container <?php endif;?>left">
         '{{frontend_label}}'
@@ -155,6 +136,11 @@
 <div class="template no-display" id="<?php echo $this->getHtmlId() ?>_simple_pricing_view">
     &nbsp;<?php echo Mage::helper('catalog')->__('Price') ?> <strong>'{{value}}'</strong>
 </div>
+    
+<div class="entry-edit">
+    <?php echo $this->getAdvancedConditionsHtml() ?>
+</div>
+    
 <?php echo $this->getGridHtml() ?>
 <script type="text/javascript">
 var superProduct = new Product.Configurable(<?php echo $this->getAttributesJson() ?>,<?php echo $this->getLinksJson() ?>,'<?php echo $this->getHtmlId() ?>_',<?php echo $this->getGridJsObject() ?>, <?php echo ( $this->isReadonly() ? 'true' : 'false'); ?>);

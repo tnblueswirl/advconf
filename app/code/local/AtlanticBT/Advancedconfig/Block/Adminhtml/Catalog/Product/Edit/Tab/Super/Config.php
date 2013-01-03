@@ -110,6 +110,11 @@ class AtlanticBT_Advancedconfig_Block_Adminhtml_Catalog_Product_Edit_Tab_Super_C
                     'onclick' => 'superProduct.createEmptyProduct()'
                 ))
         );
+        
+        $this->setChild('advanced_config_conditions',
+            $this->getLayout()->createBlock('atlanticbt_advancedconfig/adminhtml_catalog_product_edit_tab_super_conditions',
+                'advanced_config_conditions')
+        );      
 
         if ($this->_getProduct()->getId()) {
             $this->setChild('simple',
@@ -207,6 +212,20 @@ class AtlanticBT_Advancedconfig_Block_Adminhtml_Catalog_Product_Edit_Tab_Super_C
         }
 
         return $data;
+    }
+    
+    /**
+     * Retrieve Conditions child HTML
+     * 
+     * @return string
+     */
+    public function getAdvancedConditionsHtml()
+    {
+        //$conditionsForm = $this->getChild('advanced_config_conditions');
+        //$conditionsForm::_prepareForm();
+        
+        return $this->getChildHtml('advanced_config_conditions');
+        //return 'test';
     }
 
     /**

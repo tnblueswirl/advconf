@@ -6,9 +6,12 @@
             <action method="setCanLoadExtJs"><flag>1</flag></action>
             <action method="setCanLoadRulesJs"><flag>1</flag></action>
         </reference>
-        <reference name="js">
-            <block type="adminhtml/promo_catalog_edit_js" template="promo/js.phtml" />
-        </reference>
-        <!--<block type="adminhtml/promo_catalog_edit_tab_conditions" name="promo_catalog_edit_tab_conditions"/>-->
+        <block type="atlanticbt_advancedconfig/adminhtml_catalog_product_edit_tab_super_conditions" name="advanced_config_conditions" />
     </adminhtml_catalog_product_edit>
+    
+    <!--<adminhtml_catalog_product_superconfig>
+        <reference name="content">
+            <block type="atlanticbt_advancedconfig/adminhtml_catalog_product_edit_tab_super_conditions" name="advanced_config_conditions" />
+        </reference>
+    </adminhtml_catalog_product_superconfig>-->
 </layout>

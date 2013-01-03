@@ -11,14 +11,14 @@
                 <class>AtlanticBT_Advancedconfig_Model</class>
             </atlanticbt_advancedconfig>
         </models>
-        <resources>
+<!--        <resources>
             <advancedconfig_setup>
                 <setup>
                     <module>AtlanticBT_Advancedconfig</module>
                     <class>AtlanticBT_Advancedconfig_Model_Resource_Setup</class>
                 </setup>
             </advancedconfig_setup>
-        </resources>
+        </resources>-->
         <helpers>
             <atlanticbt_advancedconfig>
                 <class>AtlanticBT_Advancedconfig_Helper</class>

@@ -46,12 +46,12 @@ include_once('Mage/Adminhtml/controllers/Catalog/ProductController.php');
 class AtlanticBT_Advancedconfig_Adminhtml_Catalog_ProductController 
     extends Mage_Adminhtml_Catalog_ProductController
 {
-    /*public function newConditionHtmlAction()
+    public function newConditionHtmlAction()
     {
         $id = $this->getRequest()->getParam('id');
         $typeArr = explode('|', str_replace('-', '/', $this->getRequest()->getParam('type')));
         $type = $typeArr[0];
-
+/*
         $model = Mage::getModel($type)
             ->setId($id)
             ->setType($type)
@@ -67,9 +67,15 @@ class AtlanticBT_Advancedconfig_Adminhtml_Catalog_ProductController
         } else {
             $html = '';
         }
+        */
+        $html = $id . ' - ' . $type;
+        
         $this->getResponse()->setBody($html);
-    }*/
+    }
+   
     
+
+ 
     /**
      * Initialize product from request parameters
      *
