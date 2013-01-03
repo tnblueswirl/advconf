@@ -1,35 +1,32 @@
 <?php
 /**
- * Magento
+ * Advanced Configurable Product Controller
  *
- * NOTICE OF LICENSE
+ * PHP version 5
  *
- * This source file is subject to the Open Software License (OSL 3.0)
- * that is bundled with this package in the file LICENSE.txt.
- * It is also available through the world-wide-web at this URL:
- * http://opensource.org/licenses/osl-3.0.php
- * If you did not receive a copy of the license and are unable to
- * obtain it through the world-wide-web, please send an email
- * to license@magentocommerce.com so we can send you a copy immediately.
+ * The license text...
  *
- * DISCLAIMER
- *
- * Do not edit or add to this file if you wish to upgrade Magento to newer
- * versions in the future. If you wish to customize Magento for your
- * needs please refer to http://www.magentocommerce.com for more information.
- *
- * @category    Mage
- * @package     Mage_Adminhtml
- * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
- * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @category  Advancedconfig
+ * @package   AtlanticBT_Advancedconfig
+ * @author    Adam Daniels <adam.daniels@atlanticbt.com>
+ * @copyright 2013 Adam Daniels
+ * @license   http://www.atlanticbt.com/ Atlantic BT 
+ * @version   CVS: $Id:$
+ * @link      <>
+ * @see       References to other sections (if any)...
  */
 
 /**
- * Catalog product controller
+ * Advanced Configurable Product Controller
  *
- * @category   Mage
- * @package    Mage_Adminhtml
- * @author      Magento Core Team <core@magentocommerce.com>
+ * @category  Advancedconfig
+ * @package   AtlanticBT_Advancedconfig
+ * @author    Adam Daniels <adam.daniels@atlanticbt.com>
+ * @copyright 2013 Adam Daniels
+ * @license   http://www.atlanticbt.com/ Atlantic BT
+ * @version   Release: @package_version@
+ * @link      <>
+ * @see       References to other sections (if any)...
  */
 
 /**
@@ -51,11 +48,11 @@ class AtlanticBT_Advancedconfig_Adminhtml_Catalog_ProductController
         $id = $this->getRequest()->getParam('id');
         $typeArr = explode('|', str_replace('-', '/', $this->getRequest()->getParam('type')));
         $type = $typeArr[0];
-/*
-        $model = Mage::getModel($type)
-            ->setId($id)
-            ->setType($type)
-            ->setRule(Mage::getModel('catalogrule/rule'))
+
+        $model = Mage::getModel('atlanticbt_advancedconfig/condition')
+            //->setId($id)
+            //->setType($type)
+            //->setRule(Mage::getModel('catalogrule/rule'))
             ->setPrefix('conditions');
         if (!empty($typeArr[1])) {
             $model->setAttribute($typeArr[1]);
@@ -67,8 +64,6 @@ class AtlanticBT_Advancedconfig_Adminhtml_Catalog_ProductController
         } else {
             $html = '';
         }
-        */
-        $html = $id . ' - ' . $type;
         
         $this->getResponse()->setBody($html);
     }
