@@ -1,0 +1,5 @@
+app/etc/modules/AtlanticBT_*					app/etc/modules/
+app/code/local/AtlanticBT*					app/code/local/
+app/design/adminhtml/default/default/template/atlanticbt*	app/design/adminhtml/default/default/template/
+app/design/adminhtml/default/default/layout/atlanticbt*		app/design/adminhtml/default/default/layout/
+
