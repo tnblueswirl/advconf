@@ -18,6 +18,11 @@
         </helpers>
         <blocks>
             <atlanticbt_advancedconfig><class>AtlanticBT_Advancedconfig_Block</class></atlanticbt_advancedconfig>
+            <adminhtml>
+                <rewrite>
+                    <catalog_product_edit_tab_super_config>AtlanticBT_Advancedconfig_Block_Adminhtml_Catalog_Product_Edit_Tab_Super_Config</catalog_product_edit_tab_super_config>
+                </rewrite>
+            </adminhtml>
         </blocks>        
     </global>
     <admin>
